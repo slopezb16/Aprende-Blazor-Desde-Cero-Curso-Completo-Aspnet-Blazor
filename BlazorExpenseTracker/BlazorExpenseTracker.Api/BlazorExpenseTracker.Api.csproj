@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\BlazorExpenseTracker.Data\BlazorExpenseTracker.Data.csproj" />
+    <ProjectReference Include="..\BlazorExpenseTracker.Model\BlazorExpenseTracker.Model.csproj" />
   </ItemGroup>
 
 </Project>

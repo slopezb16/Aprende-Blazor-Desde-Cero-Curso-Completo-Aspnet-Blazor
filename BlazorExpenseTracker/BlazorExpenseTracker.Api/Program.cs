@@ -1,4 +1,5 @@
 using BlazorExpenseTracker.Data;
+using BlazorExpenseTracker.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Mappeamos los Repositorios con sus Interfaces
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 // Configurar la conexion a la base de datos
 var sqlConnectionConfiguration = new SqlConfiguration(builder.Configuration.GetConnectionString("SqlConnection"));
