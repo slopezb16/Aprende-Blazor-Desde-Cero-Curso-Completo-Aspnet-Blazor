@@ -1,0 +1,38 @@
+﻿@*<h3>TabPage</h3>*@
+
+@if(Parent.ActivePage == this)
+{
+@*lo que sea que se escriba en medio de los tabPage se va a escribir aca*@
+@ChildContent
+}
+
+@code {
+    [CascadingParameter]
+    private TabControl Parent { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Text { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        if(Parent == null)
+        {
+            throw new ArgumentNullException(nameof(Parent), "Any TabPage must have a Parent TabControl");
+        }
+
+        //vamos hacer que El TabPage se agrege a si mismo en la lista -> cpomo child como hijo
+        Parent.AddPage(this);
+
+
+        return base.OnInitializedAsync();
+
+    }
+
+
+    //vamos a agregar la imagen
+    [Parameter]
+    public string ImgSource { get; set; }
+}

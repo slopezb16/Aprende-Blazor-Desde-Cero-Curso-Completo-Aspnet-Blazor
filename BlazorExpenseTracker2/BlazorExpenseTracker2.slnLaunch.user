@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj",
+        "Action": "Start",
+        "DebugTarget": "BlazorExpenseTracker2.UI"
+      },
+      {
+        "Path": "BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "IIS Express"
+      }
+    ]
+  }
+]

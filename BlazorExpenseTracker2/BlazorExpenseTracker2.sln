@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExpenseTracker2.UI", "BlazorExpenseTracker2.UI\BlazorExpenseTracker2.UI.csproj", "{86A19D8C-24EF-4EBE-AAB2-088662879AAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0C3F5E1D-0368-49BC-9DD0-9AC3FA3D48BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{19129686-E19E-4C46-9FDF-AD76BF6E95B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{EF7D70CF-3C22-422E-858A-6C27973C61C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExpenseTracker2.Data", "BlazorExpenseTracker2.Data\BlazorExpenseTracker2.Data.csproj", "{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExpenseTracker2.Model", "BlazorExpenseTracker2.Model\BlazorExpenseTracker2.Model.csproj", "{91A4E69D-4C58-4E2C-A977-701C78CA6B26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExpenseTracker2.API", "BlazorExpenseTracker2.API\BlazorExpenseTracker2.API.csproj", "{4233F550-DCA2-4959-B628-39F00D177EC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86A19D8C-24EF-4EBE-AAB2-088662879AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A19D8C-24EF-4EBE-AAB2-088662879AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A19D8C-24EF-4EBE-AAB2-088662879AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A19D8C-24EF-4EBE-AAB2-088662879AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A4E69D-4C58-4E2C-A977-701C78CA6B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A4E69D-4C58-4E2C-A977-701C78CA6B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A4E69D-4C58-4E2C-A977-701C78CA6B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A4E69D-4C58-4E2C-A977-701C78CA6B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4233F550-DCA2-4959-B628-39F00D177EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4233F550-DCA2-4959-B628-39F00D177EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4233F550-DCA2-4959-B628-39F00D177EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4233F550-DCA2-4959-B628-39F00D177EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF06E5C6-71B7-4D6F-B666-D3B4376CF34C} = {0C3F5E1D-0368-49BC-9DD0-9AC3FA3D48BA}
+		{91A4E69D-4C58-4E2C-A977-701C78CA6B26} = {19129686-E19E-4C46-9FDF-AD76BF6E95B0}
+		{4233F550-DCA2-4959-B628-39F00D177EC5} = {EF7D70CF-3C22-422E-858A-6C27973C61C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3D0D63E-7B0E-4744-96F4-09B119FE2C0B}
+	EndGlobalSection
+EndGlobal

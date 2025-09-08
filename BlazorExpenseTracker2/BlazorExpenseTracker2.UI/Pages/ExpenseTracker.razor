@@ -1,0 +1,54 @@
+﻿@page "/ExpenseTracker"
+
+@using BlazorExpenseTracker2.Model;
+ @using BlazorExpenseTracker2.UI.Components
+ @implements IDisposable
+
+
+<h3>ExpenseTracker</h3>
+
+<CascadingValue Value="expense">
+
+<TabControl>
+    @*aca realizamos el ajuste para el render fracmen con el del video 36*@
+    <TabTitle>
+        <img src="img/@(context.ImgSource).png" />
+        @context.Text
+    </TabTitle>
+
+    @*ChildContent se usa para saber que hay que renderizar cuando se tienen varios*@
+    <ChildContent>
+    <TabPage Text="Expense">
+        <ExpenseDetails expenseType="@Model.ExpenseType.Expense"></ExpenseDetails>
+    </TabPage>
+
+    <TabPage Text="Income" ImgSource="+">
+        @*<h3>Amounts will be positive here</h3>*@
+        <ExpenseDetails expenseType="@Model.ExpenseType.Income"></ExpenseDetails>
+
+    </TabPage>
+    </ChildContent>
+
+</TabControl>
+
+<ExpenseHistory > 
+</ExpenseHistory>
+
+</CascadingValue>
+
+@code {
+    public Expense expense;
+
+    protected override Task OnInitializedAsync()
+    {
+        expense = new Expense();
+        expense.OnSelectedExpenseChanged += StateHasChanged;
+
+        return base.OnInitializedAsync();
+    }
+
+    public void Dispose()
+    {
+        expense.OnSelectedExpenseChanged -= StateHasChanged;
+    }
+}

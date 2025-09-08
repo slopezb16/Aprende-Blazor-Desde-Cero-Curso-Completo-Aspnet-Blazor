@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|d:\\onedrive\\escritorio\\cursos\\1.aprende blazor desde cero - curso completo de asp.net blazor - mio\\blazorexpensetracker2\\blazorexpensetracker2.api\\blazorexpensetracker2.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|solutionrelative:blazorexpensetracker2.api\\blazorexpensetracker2.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.5_0.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|d:\\onedrive\\escritorio\\cursos\\1.aprende blazor desde cero - curso completo de asp.net blazor - mio\\blazorexpensetracker2\\blazorexpensetracker2.api\\blazorexpensetracker2.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|solutionrelative:blazorexpensetracker2.api\\blazorexpensetracker2.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlazorExpenseTracker2.API",
+              "DocumentMoniker": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "RelativeDocumentMoniker": "BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "ToolTip": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "RelativeToolTip": "BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-08T00:12:36.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.5_0.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.5_0.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.5_0.targets",
+              "ViewState": "AgIAAPABAAAAAAAAAIAwwAMCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-07T23:43:56.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAkXAAAAAAAAAIAwwBwXAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-06T05:02:36.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlazorExpenseTracker2.API.csproj",
+              "DocumentMoniker": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "RelativeDocumentMoniker": "BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "ToolTip": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "RelativeToolTip": "BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-06T05:00:31.623Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

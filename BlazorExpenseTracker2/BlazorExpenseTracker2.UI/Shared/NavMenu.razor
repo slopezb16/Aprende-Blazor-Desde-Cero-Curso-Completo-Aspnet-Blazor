@@ -1,0 +1,50 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">BlazorExpenseTracker2.UI</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        @*creados por mi*@
+        <li class="nav-item px-3">
+            @*NavLink es un componente razor nevagacion HTML - es como un contenedor de link o hipervinculos*@
+            @*blazor no tiene una navegacion real -> solo carga los componentes sin hacer algun tipo de postback o de recarga de la pagina*@
+            @*para determinar cual es el elemento CSS se usa la propiedad Match -> para determinar cual es el CSS del elemento HTML que cambia*@
+            <NavLink class="nav-link" href="/Categories" Match="NavLinkMatch.All">
+                @*Match tiene dos formas de actuar -> All o Prefix ()*@
+                @*cuando es All para que el link de nuestro nav Menu sea marcado como activo. La URL del navegador debe coincidir exactamente con la del navlink seria la del href -> href="" Match="NavLinkMatch.All"*@
+                @*ahora la diferencia entre esa y la otra es:*@
+                @*Prefix ante la presencia de cualquier prefijo del link en la URL del navegador esta se va a marcar como activo*@
+                <span class="oi oi-task" aria-hidden="true"></span> Categories
+            </NavLink>
+
+            @*CategoryDetails*@
+            <NavLink class="nav-link" href="/CategoryDetails" Match="NavLinkMatch.All">
+                <span class="oi oi-star" aria-hidden="true"></span> CategyDetails
+            </NavLink>
+
+            @*ExpenseTracker*@
+            <NavLink class="nav-link" href="/ExpenseTracker" Match="NavLinkMatch.All">
+                <span class="oi oi-star" aria-hidden="true"></span> ExpenseTracker
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

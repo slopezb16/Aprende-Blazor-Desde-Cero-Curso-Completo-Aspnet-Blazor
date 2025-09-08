@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BlazorExpenseTracker2.UI.props" />
+</Project>
