@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iETNu+vle/I=",
+  "dgSpecHash": "r4N0wMM9AW4=",
   "success": true,
-  "projectFilePath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
+  "projectFilePath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santy\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\santy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

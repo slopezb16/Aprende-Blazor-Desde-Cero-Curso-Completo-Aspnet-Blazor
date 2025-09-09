@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = BlazorExpenseTracker2.UI
-build_property.ProjectDir = D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\
+build_property.ProjectDir = D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

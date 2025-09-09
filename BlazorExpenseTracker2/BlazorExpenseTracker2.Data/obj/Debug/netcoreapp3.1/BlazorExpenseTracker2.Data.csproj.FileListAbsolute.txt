@@ -24,3 +24,17 @@ D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de AS
 D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorEx.100FD2A1.Up2Date
 D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.dll
 D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.pdb
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.csproj.AssemblyReference.cache
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.AssemblyInfoInputs.cache
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.AssemblyInfo.cs
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.sourcelink.json
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\bin\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.deps.json
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\bin\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.dll
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\bin\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.pdb
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\bin\Debug\netcoreapp3.1\BlazorExpenseTracker2.Model.dll
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\bin\Debug\netcoreapp3.1\BlazorExpenseTracker2.Model.pdb
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorEx.100FD2A1.Up2Date
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.dll
+D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.Data\obj\Debug\netcoreapp3.1\BlazorExpenseTracker2.Data.pdb

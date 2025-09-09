@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vtKbh58+NcA=",
+  "dgSpecHash": "XrI7OxJ1VbA=",
   "success": true,
-  "projectFilePath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
+  "projectFilePath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santy\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\santy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -21,9 +21,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"System.Data.SqlClient\" 4.8.5 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
+      "projectPath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
+      "filePath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.Data\\BlazorExpenseTracker2.Data.csproj",
       "libraryId": "System.Data.SqlClient",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

@@ -1,7 +1,5 @@
 using BlazorExpenseTracker.UI.Interfaces;
 using BlazorExpenseTracker.UI.Services;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +12,9 @@ builder.Services.AddServerSideBlazor().AddCircuitOptions(options => { options.De
 // Agregamos la URl del consumo de la API
 // Para los diferentes Servicios
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(
+    client => { client.BaseAddress = new Uri("https://localhost:44373"); });
+
+builder.Services.AddHttpClient<IExpenseService, ExpenseService>(
     client => { client.BaseAddress = new Uri("https://localhost:44373"); });
 
 var app = builder.Build();

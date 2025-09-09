@@ -13,73 +13,73 @@ namespace BlazorExpenseTracker2.UI.Pages
     using global::System.Threading.Tasks;
     using global::Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 1 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using System.Net.Http
 
 #nullable disable
     ;
 #nullable restore
-#line 2 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 2 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.AspNetCore.Authorization
 
 #nullable disable
     ;
 #nullable restore
-#line 3 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 3 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization
 
 #nullable disable
     ;
 #nullable restore
-#line 4 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 4 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms
 
 #nullable disable
     ;
 #nullable restore
-#line 5 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 5 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing
 
 #nullable disable
     ;
 #nullable restore
-#line 6 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 6 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web
 
 #nullable disable
     ;
 #nullable restore
-#line 7 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 7 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using Microsoft.JSInterop
 
 #nullable disable
     ;
 #nullable restore
-#line 8 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 8 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using BlazorExpenseTracker2.UI
 
 #nullable disable
     ;
 #nullable restore
-#line 9 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 9 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using BlazorExpenseTracker2.UI.Shared
 
 #nullable disable
     ;
 #nullable restore
-#line 12 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
+#line 12 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\_Imports.razor"
 using ChartJs.Blazor
 
 #nullable disable
     ;
 #nullable restore
-#line 2 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 2 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
  using Model
 
 #nullable disable
     ;
 #nullable restore
-#line 3 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 3 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
  using Interfaces
 
 #nullable disable
@@ -96,7 +96,7 @@ using ChartJs.Blazor
         }
         #pragma warning restore 1998
 #nullable restore
-#line 63 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 63 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
        
     //este es de forma local
     //private Expense expense = new Expense();
@@ -167,7 +167,7 @@ using ChartJs.Blazor
 
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line 8 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 8 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
         IJSRuntime
 
 #line default
@@ -175,7 +175,7 @@ using ChartJs.Blazor
 #nullable disable
          
 #nullable restore
-#line 8 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 8 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
                    JSRuntime
 
 #line default
@@ -185,7 +185,7 @@ using ChartJs.Blazor
          = default!;
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line 6 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 6 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
         IExpenseService
 
 #line default
@@ -193,7 +193,7 @@ using ChartJs.Blazor
 #nullable disable
          
 #nullable restore
-#line 6 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 6 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
                         IExpenseService
 
 #line default
@@ -203,7 +203,7 @@ using ChartJs.Blazor
          = default!;
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private 
 #nullable restore
-#line 5 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 5 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
         ICategoryService
 
 #line default
@@ -211,7 +211,7 @@ using ChartJs.Blazor
 #nullable disable
          
 #nullable restore
-#line 5 "D:\OneDrive\Escritorio\Cursos\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
+#line 5 "D:\OneDrive\Documentos\GitHub\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\BlazorExpenseTracker2\BlazorExpenseTracker2.UI\Pages\ExpenseDetails.razor"
                          CategoryService
 
 #line default

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorExpenseTracker2.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1ceb88b42e61b9536b526c45a09e571715d18ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorExpenseTracker2.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorExpenseTracker2.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

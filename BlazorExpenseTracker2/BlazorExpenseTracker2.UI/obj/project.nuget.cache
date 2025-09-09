@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UVW9HsaQI/w=",
+  "dgSpecHash": "L9SZXuAZfUs=",
   "success": true,
-  "projectFilePath": "D:\\OneDrive\\Escritorio\\Cursos\\1.Aprende Blazor desde Cero - Curso Completo de ASP.NET Blazor - Mio\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj",
+  "projectFilePath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santy\\.nuget\\packages\\chartjs.blazor\\1.1.0\\chartjs.blazor.1.1.0.nupkg.sha512",
     "C:\\Users\\santy\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.0\\microsoft.aspnetcore.authorization.3.1.0.nupkg.sha512",

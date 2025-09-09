@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 // Mappeamos los Repositorios con sus Interfaces
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
 // Configurar la conexion a la base de datos
 var sqlConnectionConfiguration = new SqlConfiguration(builder.Configuration.GetConnectionString("SqlConnection"));
