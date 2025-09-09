@@ -1,53 +1,71 @@
-﻿<div class="btn-group" role="group">
+﻿@*<h3>TabControl</h3>*@
+
+<div class="btn-group" role="group">
     @foreach (TabPage tabPage in Pages)
     {
-    <button type="button"
-            class="btn @GetButtonClass(tabPage)"
-            @onclick=@(() => ActivatePage(tabPage) )>
+        <button type="button"
+                class="btn @GetButtonClass(tabPage)"
+                @onclick=@(() => ActivatePage(tabPage))>
 
-        @if (TabTitle != null)
-        {
-            @TabTitle(tabPage)
-        }
-        else
-        {
-            @tabPage.Text
-        }
-    </button>
+            @if (TabTitle != null)
+            {
+                @TabTitle(tabPage)
+            }
+            else
+            {
+                @tabPage.Text
+            }
+        </button>
     }
 </div>
 
-
+@*esto significa que TabPage necesita una referencia a su padre*@
+@*se agrega asi mismo y pueda acceder al padre*@
 <CascadingValue Value="this">
     @ChildContent
 </CascadingValue>
 
 @code {
-    //This parameter will receive each TabPage added to the TabControl
+    //este parametro va a recibir cada TabPage que se agrege en el control, en el TabControl
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    //para que esto tenga sentidi agregamos un cascadingparameter en el TabPage
 
+    //Video #36
     [Parameter]
     public RenderFragment<TabPage> TabTitle { get; set; }
+    //para modificar el foreach
 
+    //vamos agregar el metodo TabPage
+
+    //este metodo revisa y devuelve cual es la pagina que esta viendo o usando el usuario
+    //revisa cual de todas las TabPages que tiene el control es la que esta viendo el usuario ahora mismo
     public TabPage ActivePage { get; set; }
     List<TabPage> Pages = new List<TabPage>();
 
+    //recibir una TabPage
     internal void AddPage(TabPage tabPage)
     {
+        //la agrega al listado
         Pages.Add(tabPage);
 
+        //si cumple la condicion es la pagina que esta viendo el usuario o la pagina activa
         if (Pages.Count == 1)
+        {
             ActivePage = tabPage;
+        }
 
+        //lo que quiero aca es que el componente sea renderizado, cuando una pagina sea agregada
         StateHasChanged();
     }
 
+    //organizar el boton
     protected string GetButtonClass(TabPage page)
     {
         return page == ActivePage ? "btn-primary" : "btn-secondary";
     }
 
+    //este determina cuando una pagina esta activa
     protected void ActivatePage(TabPage page)
     {
         ActivePage = page;

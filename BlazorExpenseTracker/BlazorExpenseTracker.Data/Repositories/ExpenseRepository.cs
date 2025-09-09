@@ -1,4 +1,5 @@
-﻿using BlazorExpenseTracker.Model;
+﻿using BlazorExpenseTracker.Data.Data;
+using BlazorExpenseTracker.Model;
 using Dapper;
 using System.Data.SqlClient;
 
@@ -6,6 +7,7 @@ namespace BlazorExpenseTracker.Data.Repositories
 {
     public class ExpenseRepository : IExpenseRepository
     {
+        //Configuracion de la cadena de conexion
         private SqlConfiguration _connectionString;
 
         public ExpenseRepository(SqlConfiguration connectionString)
@@ -17,6 +19,7 @@ namespace BlazorExpenseTracker.Data.Repositories
         {
             return new SqlConnection(_connectionString.ConnectionString);
         }
+        //Fin
 
         public async Task<IEnumerable<Expense>> GetAllExpenses()
         {
@@ -28,7 +31,10 @@ namespace BlazorExpenseTracker.Data.Repositories
                         FROM Expenses e
                             INNER JOIN Categories c ON e.CategoryId = c.Id ";
 
+            //dapper
+            //cargar los 2 elemento
             var result = await db.QueryAsync<Expense, Category, Expense>(sql,
+                //para combinar los elemnetos
                 ((expense, category) =>
                 {
                     expense.Category = category;

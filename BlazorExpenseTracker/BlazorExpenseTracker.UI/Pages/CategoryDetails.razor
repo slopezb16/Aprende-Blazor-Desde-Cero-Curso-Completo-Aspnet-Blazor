@@ -1,70 +1,129 @@
-﻿@page "/categorydetails"
-@page "/categorydetails/{id:int}"
-@inject ICategoryService  CategoryService
+﻿@page "/CategoryDetails"
+
+@*esto lo metemos en el video 28 para editar el componente desde categories*@
+@*se pueden poner varias directivas*@
+@page "/CategoryDetails/{id:int}"
+
+@*en el video 24 realizamos esta inyeccion de dependecia para usar lo que creamos*@
+@inject ICategoryService CategoryService
+@*funciona porque en startup realizamos la configuracion services.AddHttpClient<ICategoryService, CategoryService>*@
+
+@*Este se usa para hacer la navegacion dentro del codigo*@
 @inject NavigationManager NavigationManager
+@*en este caso so vamoa a implementar en el boton de cancelar*@
 
-<div class="modal" tabindex="-1" style="display:block" role="dialog"
-     <div class="modal-dialog">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h1>Category Details</h1>
-             </div>
-             <div class="modal-body">
-                 <EditForm Model="@category" OnValidSubmit="SaveCategory">
-                     <DataAnnotationsValidator />
-                     @*<ValidationSummary />*@
+@*container para todo el formulario*@
+<div class="modal" tabindex="-1" style="display: block; " role="dialog">
+    <style>
+        table {
+            border: none
+        }
+    </style>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>CategoryDetails</h1>
+            </div>
+            <div class="modal-body">
+                @*no pertenece a HTML -> es un componente rezor*@
+                @*este componente usa un parametro el cuale es Model="@" -> nos permite videnar un parametro que declaramos en el C# -es bilateral se actualiza mutuamente*@
+                @*al ser un OnValidSubmit solo ejecuta el metodo si es valido por ende si esta competo ingresa en el metodo SaveCategory *@
+                <EditForm Model="@category" OnValidSubmit="SaveCategory">
+                    @*necesitamos que el campo name este con informacion y sea valido*@
+                    <DataAnnotationsValidator />
+                    @*con este le indicamos a blazor que cuando se oprima el boton verifique todos los decoradores que se tienen*@
 
-                     <table class="table">
-                         <tr>
-                             <td>Name</td>
-                             <td><input type="text" @bind="category.Name" /></td>
-                         </tr>
-                         <tr><td colspan="2"> <ValidationMessage For="@(() => category.Name)" /></td></tr>
-                         <tr>
-                             <td colspan="2" style="text-align:center">
-                                 <input type="submit" value="Save" />
-                                 <input type="button" value="Cancel" @onclick="Cancel" />
-                             </td>
-                         </tr>
-                     </table>
+                    @*ahora bien el no permite si no es valido pero no muestra un modal o texto indicandolo*@
+                    @*el ValidationSummary va a mostrar el error o la alerta de lo que pasa si no es valido*@
+                    <ValidationSummary />
+                    @*el ValidationSummary va a mostrar el ErrorMessage que se encuentra en la clase Category configurada -> ESTA ES LA FORMA MAS SENCILLA DE HACERLO*@
 
-                 </EditForm>
-             </div>   
-         </div>
-     </div>
+                    @*tabla agregar elementos de categorias*@
+                    <table class="table" style="border: none">
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" @bind="category.Name" /></td>
+                        </tr>
+                        @*esta es otra forma de mostrar un mensage de alerta cuando no se cumple una condicion por ende tenemos ValidationSummary y ValidationMessage *@
+                        <tr>
+                            <td colspan="2"><ValidationMessage For="@(() => category.Name)"></ValidationMessage></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center">
+                                <input type="submit" value="Save" />
+                                <input type="button" value="Cancel" @onclick="Cancel" />
+                            </td>
+                        </tr>
+                    </table>
+                </EditForm>
+            </div>
+        </div>
+    </div>
 </div>
 
-
 @code {
-
-    [Parameter]
-    public int id { get; set; }
-
     Category category = new Category();
 
-    protected async override Task OnInitializedAsync()
-    {
-        if (id > 0) //If no Id has been passed, then it is a new Category
-        {
-            category = await CategoryService.GetCategoryDetails(id);
-        }
-    }
-
+    //no ingresa en el metodo a no ser que haya informacion y esto sucede po lo que se le puso <DataAnnotationsValidator/>
     protected async Task SaveCategory()
     {
-        await CategoryService.SaveCategory(category);
+        //despues de la inyeccion de despendescias de la parte de arriba realizamos el metodo siguiente
+        await CategoryService.SaveCategories(category);
+        string nombre = category.Name;
 
-        NavigateToCategories();
+        ///validacion
+        NavigateCategories();
+    }
+
+    //vamos a crear un metodo para poder editar lo que metemos desde el componente  categories
+    //añadimos la directiva en la parte superior para poder recibir el id del componente a editar @page "/CategoryDetails/{id:int}"
+    [Parameter]
+    //Parameter recibe el id y lo guarda en la variable de abajo
+    public int id { get; set; } // id en minuscula para que coinsida con el de la page
+
+    //usamos otro metodo del ciclo de vida
+    protected async override Task OnInitializedAsync()
+    {
+        //return base.OnInitializedAsync();
+        //cuando la pagina sea inicializada la primera vez este metodo
+        if (id > 0) // if no Id has been passed, then it is a new Category
+        {
+            category = await CategoryService.GetCategoryDetails(id);
+            //que quiere decir esto: es que cuando se carge la pagina y note que hay un ID en la URL porque es la que se mando desde la pagina Categories el lo va a cargar en el input que creamos
+        }
+
+        //lo agregamos - no es necesario usarlo pero lo dejo jajaj
+        NavigationManager.LocationChanged += LocationChanged;
     }
 
     public void Cancel()
     {
-        NavigateToCategories();
+        //NavigateTo nos habilita a controlar la URL del navegador - la URL es remplazada, y la anterior es guardada en el historial.-> pero no se requiere ningun request para la navegacion
+        //LocationChanged esta agrega como parametro la nueva URL - este evento tiene tiene una propiedad propia
+
+        //navega y lo envia a la ubicacion deseada -- Lo comentamos porque vamos hacer una validacion para ver si ya existe
+        //NavigationManager.NavigateTo("/Categories");
+        //despues agregamos en el boton de canclar un onclick para llamar este metodo
+        //luego ponemos otro NavigationManager en OnInitializedAsync
+
+        //lo agregamos para la validacion
+        NavigateCategories();
     }
 
-    public void NavigateToCategories()
+    //lo creamos para el navigationmanager
+    //con esto puedo inspeccionar todo lo que venga en el argumento - no es necesario usarlo pero lo dejo jajaj
+    void LocationChanged(object send, LocationChangedEventArgs e)
     {
-        NavigationManager.NavigateTo("/categories");
+        //para revisar si fue una navegacion por codigo o por HTML para saber de donde viene
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "Code";
+
+        //si e es falso es que fue una navegacion por codigo por medio del boton de cancelar
+        //si es tru es que fue interceptada y eso quiere decir que se escribio la ruta desde el navegador
     }
 
+    //validamos si ya esta
+    public void NavigateCategories()
+    {
+        NavigationManager.NavigateTo("/Categories");
+    }
 }

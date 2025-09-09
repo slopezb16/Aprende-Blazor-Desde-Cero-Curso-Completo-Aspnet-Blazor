@@ -1,4 +1,4 @@
-﻿@page "/expensetracker"
+﻿@page "/ExpenseTracker"
 
 @implements IDisposable
 
@@ -6,20 +6,24 @@
 
 <CascadingValue Value="expense">
     <TabControl>
+        @*aca realizamos el ajuste para el render fracmen con el del video 36*@
         <TabTitle>
-            <img src="images/@(context.ImageSource).png" /> @context.Text
+            <img src="images/@(context.ImgSource).png" /> @context.Text
         </TabTitle>
 
+        @*ChildContent se usa para saber que hay que renderizar cuando se tienen varios*@
         <ChildContent>
-            <TabPage Text="Expense" ImageSource="minus_green">
+            <TabPage Text="Expense" ImgSource="minus_green">
                 <ExpenseDetails ExpenseType="@Model.ExpenseType.Expense"></ExpenseDetails>
             </TabPage>
-            <TabPage Text="Income" ImageSource="plus_green">
+            <TabPage Text="Income" ImgSource="plus_green">
+                @*<h3>Amounts will be positive here</h3>*@
                 <ExpenseDetails ExpenseType="@Model.ExpenseType.Income"></ExpenseDetails>
             </TabPage>
         </ChildContent>
     </TabControl>
 
+    @* Tabla Historico *@
     <ExpenseHistory></ExpenseHistory>
 </CascadingValue>
 

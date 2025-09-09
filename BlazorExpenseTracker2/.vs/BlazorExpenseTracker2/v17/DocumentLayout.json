@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|d:\\onedrive\\documentos\\github\\aprende-blazor-desde-cero-curso-completo-aspnet-blazor\\blazorexpensetracker2\\blazorexpensetracker2.api\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4233F550-DCA2-4959-B628-39F00D177EC5}|BlazorExpenseTracker2.API\\BlazorExpenseTracker2.API.csproj|solutionrelative:blazorexpensetracker2.api\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86A19D8C-24EF-4EBE-AAB2-088662879AAB}|BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj|d:\\onedrive\\documentos\\github\\aprende-blazor-desde-cero-curso-completo-aspnet-blazor\\blazorexpensetracker2\\blazorexpensetracker2.ui\\pages\\expensedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86A19D8C-24EF-4EBE-AAB2-088662879AAB}|BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj|solutionrelative:blazorexpensetracker2.ui\\pages\\expensedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{86A19D8C-24EF-4EBE-AAB2-088662879AAB}|BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj|d:\\onedrive\\documentos\\github\\aprende-blazor-desde-cero-curso-completo-aspnet-blazor\\blazorexpensetracker2\\blazorexpensetracker2.ui\\services\\expenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86A19D8C-24EF-4EBE-AAB2-088662879AAB}|BlazorExpenseTracker2.UI\\BlazorExpenseTracker2.UI.csproj|solutionrelative:blazorexpensetracker2.ui\\services\\expenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ExpenseController.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\Controllers\\ExpenseController.cs",
-              "RelativeDocumentMoniker": "BlazorExpenseTracker2.API\\Controllers\\ExpenseController.cs",
-              "ToolTip": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.API\\Controllers\\ExpenseController.cs",
-              "RelativeToolTip": "BlazorExpenseTracker2.API\\Controllers\\ExpenseController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCAAAABKAAAAAAAAAA==",
+              "Title": "ExpenseService.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\Services\\ExpenseService.cs",
+              "RelativeDocumentMoniker": "BlazorExpenseTracker2.UI\\Services\\ExpenseService.cs",
+              "ToolTip": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\Services\\ExpenseService.cs",
+              "RelativeToolTip": "BlazorExpenseTracker2.UI\\Services\\ExpenseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T01:27:55.245Z",
+              "WhenOpened": "2025-09-09T03:07:33.538Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExpenseDetails.razor",
-              "DocumentMoniker": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\Pages\\ExpenseDetails.razor",
-              "RelativeDocumentMoniker": "BlazorExpenseTracker2.UI\\Pages\\ExpenseDetails.razor",
-              "ToolTip": "D:\\OneDrive\\Documentos\\GitHub\\Aprende-Blazor-Desde-Cero-Curso-Completo-Aspnet-Blazor\\BlazorExpenseTracker2\\BlazorExpenseTracker2.UI\\Pages\\ExpenseDetails.razor",
-              "RelativeToolTip": "BlazorExpenseTracker2.UI\\Pages\\ExpenseDetails.razor",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEMAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-09T01:27:14.58Z"
             }
           ]
         }

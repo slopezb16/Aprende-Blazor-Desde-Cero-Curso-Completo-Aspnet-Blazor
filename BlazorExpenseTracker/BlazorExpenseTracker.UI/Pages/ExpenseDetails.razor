@@ -1,25 +1,34 @@
-﻿@inject ICategoryService CategoryService
-@inject IExpenseService ExpenseService
-@inject IJSRuntime JsRuntime
+﻿@*@page "/ExpenseDetails"*@
 
+@inject ICategoryService CategoryService
+@inject IExpenseService IExpenseService
 
-<EditForm Model="@expense" OnValidSubmit="SaveExpense">
+@inject IJSRuntime JSRuntime
+
+<h1>ExpenseDetails</h1>
+
+@*vamos a embeber este formulario / en cada tabpages*@
+<EditForm Model="expense" OnValidSubmit="SaveExpense">
     <DataAnnotationsValidator />
     <table class="table">
         <tr>
             <td>Amount: </td>
-            <td><InputNumber class="form-control col-sm-5" @bind-Value="@expense.Amount"></InputNumber>
-                <ValidationMessage For="@(() => expense.Amount)"></ValidationMessage></td>
-        </tr>
-        <tr>
-            <td>Transaction Date:</td>
-            <td><InputDate class="form-control col-sm-5" @bind-Value="@expense.TransactionDate"></InputDate>
-                <ValidationMessage For="@(() => expense.TransactionDate)"/>
+            <td>
+                <InputNumber class="form-control col-sm-5" @bind-Value="@expense.Amount"></InputNumber>
+                <ValidationMessage For="@(() => expense.Amount)"></ValidationMessage>
             </td>
         </tr>
         <tr>
-            <td>Category:</td>
-            <td><InputSelect class="form-control col-sm-5" @bind-Value="@expense.CategoryId">
+            <td>Transaction Date: </td>
+            <td>
+                <InputDate class="form-control col-sm-5" @bind-Value="@expense.TransactionDate"></InputDate>
+                <ValidationMessage For="@(() => expense.TransactionDate)" />
+            </td>
+        </tr>
+        <tr>
+            <td>Category: </td>
+            <td>
+                <InputSelect class="form-control col-sm-5" @bind-Value="@expense.CategoryId">
                     @foreach (Category item in categories)
                     {
                         <option value="@item.Id">@item.Name</option>
@@ -28,7 +37,7 @@
             </td>
         </tr>
         <tr>
-            <td>Expense Type:</td>
+            <td>Expense Type</td>
             <td>
                 <InputSelect class="form-control col-sm-5" disabled="true" @bind-Value="@expense.ExpenseType">
                     <option value="@(ExpenseType.Income)">Income</option>
@@ -37,22 +46,32 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="text-align:center">
+            @* <td colspan="2" style="text-align: center">
                 <input type="submit" class="btn btn-success" value="@(expense.Id == 0 ? "Save" : "Update")" />
-                <input type="button" class="btn btn-secondary" value="Cancel" style="@GetCancelButtonStyle()"
-                       @onclick="Cancel" />
-                <input type="button" class="btn btn-danger" value="Delete" style="@GetCancelButtonStyle()" 
-                       @onclick="DeleteExpense"/>
+                <input type="button" class="btn btn-danger" value="Cancel" style="@GetCancelButtonStyle()" @onclick="Cancel" />
+                <input type="button" class="btn btn-dark" value="Delete" style="@GetCancelButtonStyle()" @onclick="DeleteExpense" />
+            </td> *@
+            <td colspan="2" style="text-align: center">
+                <button type="submit" class="btn btn-success">
+                    @(expense.Id == 0 ? "Save" : "Update")
+                </button>
+                <button type="button" class="btn btn-danger" style="@GetCancelButtonStyle()" @onclick="Cancel">
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-dark" style="@GetCancelButtonStyle()" @onclick="DeleteExpense">
+                    Delete
+                </button>
             </td>
         </tr>
-
     </table>
-
 </EditForm>
 
 @code {
+    //este es de forma local
     //private Expense expense = new Expense();
-    [CascadingParameter] protected Expense expense { get; set; }
+    //para que tome lo mismo de expensehistory
+    [CascadingParameter]
+    protected Expense expense { get; set; }
 
     private IEnumerable<Category> categories = new List<Category>();
 
@@ -68,13 +87,14 @@
         if (expense.Id == 0)
         {
             expense.CategoryId = categories.FirstOrDefault().Id.ToString();
+
             expense.ExpenseType = ExpenseType;
         }
     }
 
     protected async Task SaveExpense()
     {
-        await ExpenseService.SaveExpense(expense);
+        await IExpenseService.SaveExpense(expense);
         ClearExpense();
 
         expense.SelectedExpenseChanged(expense);
@@ -82,7 +102,7 @@
 
     protected string GetCancelButtonStyle()
     {
-        return expense.Id == 0 ? "display:none" : "";
+        return expense.Id == 0 ? "display:None" : "";
     }
 
     public void Cancel()
@@ -94,19 +114,21 @@
     {
         expense.Id = 0;
         expense.Amount = 0;
-        expense.TransactionDate = DateTime.MinValue;
+        // expense.TransactionDate = DateTime.MinValue;
+        expense.TransactionDate = DateTime.Now;
         expense.CategoryId = categories.FirstOrDefault().Id.ToString();
         expense.ExpenseType = ExpenseType;
     }
 
     protected async Task DeleteExpense()
     {
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Are you sure?");
-        if (confirmed)
+        //metodo java script para confirmar
+        bool Confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Are yue sure?");
+        if (Confirmed == true)
         {
-            await ExpenseService.DeleteExpense(expense.Id);
+            await IExpenseService.DeleteExpense(expense.Id);
             expense.SelectedExpenseChanged(expense);
             ClearExpense();
-        }      
+        }
     }
 }

@@ -1,4 +1,4 @@
-using BlazorExpenseTracker.Data;
+using BlazorExpenseTracker.Data.Data;
 using BlazorExpenseTracker.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,10 +11,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Mappeamos los Repositorios con sus Interfaces
+// Aca continuamos lo que indicamos en el controlador CategoryController para la inyeccion de dependencias
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
 // Configurar la conexion a la base de datos
+//Vamos a traer la conexion de base de datos
 var sqlConnectionConfiguration = new SqlConfiguration(builder.Configuration.GetConnectionString("SqlConnection"));
 builder.Services.AddSingleton(sqlConnectionConfiguration);
 

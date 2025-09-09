@@ -9,17 +9,32 @@
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
+        @*NavLink es un componente razor nevagacion HTML - es como un contenedor de link o hipervinculos*@
+        @*blazor no tiene una navegacion real -> solo carga los componentes sin hacer algun tipo de postback o de recarga de la pagina*@
+        @*para determinar cual es el elemento CSS se usa la propiedad Match -> para determinar cual es el CSS del elemento HTML que cambia*@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
+        @*Category*@
         <div class="nav-item px-3">
+            @*Match tiene dos formas de actuar -> All o Prefix ()*@
+            @*cuando es All para que el link de nuestro nav Menu sea marcado como activo. La URL del navegador debe coincidir exactamente con la del navlink seria la del href -> href="" Match="NavLinkMatch.All"*@
+            @*ahora la diferencia entre esa y la otra es:*@
+            @*Prefix ante la presencia de cualquier prefijo del link en la URL del navegador esta se va a marcar como activo*@
             <NavLink class="nav-link" href="/categories" Match="NavLinkMatch.All">
                 <span class="oi oi-task" aria-hidden="true"></span> Categories
             </NavLink>
         </div>
+        @*CategoryDetails*@
         <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/CategoryDetails" Match="NavLinkMatch.All">
+                <span class="oi oi-star" aria-hidden="true"></span> CategyDetails
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            @*ExpenseTracker*@
             <NavLink class="nav-link" href="/expensetracker" Match="NavLinkMatch.All">
                 <span class="oi oi-task" aria-hidden="true"></span> Expense Tracker
             </NavLink>

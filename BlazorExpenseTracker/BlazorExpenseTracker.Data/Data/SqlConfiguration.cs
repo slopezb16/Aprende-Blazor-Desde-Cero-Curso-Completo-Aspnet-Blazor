@@ -1,4 +1,4 @@
-﻿namespace BlazorExpenseTracker.Data
+﻿namespace BlazorExpenseTracker.Data.Data
 {
     public class SqlConfiguration
     {

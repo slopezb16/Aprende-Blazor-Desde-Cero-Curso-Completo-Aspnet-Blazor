@@ -1,7 +1,11 @@
-﻿@page "/categories"
+﻿@page "/Categories"
+
+@*en el paso del video 27*@
+@*Injectamos la interfaz -> ICategoryService tipo -> CategoryService Nombre de la variable*@
 @inject ICategoryService CategoryService
 
 <h1>Categories</h1>
+@*Imprimimos el mesage de error*@
 <p>@Message</p>
 
 @if (categories == null)
@@ -10,31 +14,34 @@
 }
 else
 {
+    //para crear
     <table class="table">
         <tbody>
             <tr>
-                <td colspan="2"><a href="/categorydetails"> Add New</a></td>
+                <td colspan="2"><a href="/CategoryDetails" class="btn btn-success text-dark">Add New</a></td>
             </tr>
         </tbody>
-
     </table>
-
-    <table class="table">
+    //para editar
+    <table>
         <thead>
             <tr>
                 <th>Name</th>
-                <th></th>
-                <th></th>
+                <td></td>
+                <td></td>
             </tr>
         </thead>
         <tbody>
             @foreach (var category in categories)
             {
-            <tr>
-                <td>@category.Name</td>
-                <td><a href="/categorydetails/@category.Id"><i>Edit</i></a></td>
-                <td><a href="/categorydelete/@category.Id"><i>Delete</i></a></td>
-            </tr>
+                <tr>
+                    <td>@category.Name</td>
+                    @*asi como esta aca solo se abriria una pagina nueva*@
+                    @*<td><a href="/CategoryDetails">Edit</a></td>*@
+                    @*aca necesitamos poder editar el componente*@
+                    <td><a href="/CategoryDetails/@category.Id" class="btn btn-primary text-dark">Edit</a></td>
+                    <td><a href="/CategoryDelete/@category.Id" class="btn btn-warning text-dark">Delete</a></td>
+                </tr>
             }
         </tbody>
     </table>
@@ -42,18 +49,27 @@ else
 
 @code {
 
+    //esta propiedad es con la que voy a cargar el servicio a la que le voy a indicar que hay en la base
     public IEnumerable<Category> categories { get; set; }
+
+    //Agregamos este metodo siguiente para la captura de los mensajes del try catch
     public string Message { get; set; }
 
+    //con este metodo siguiente es que vamos a cargar los datos sin renderizar la pagina por completo sin refrescar
+    //Sirve para traer datos de la base de datos y con esos datos antes de que la pagina haya renderizado cargar todos los componentes del formulario
     protected async override Task OnInitializedAsync()
     {
+        //return base.OnInitializedAsync();
+
         try
         {
-            categories =  await CategoryService.GetAllCategories();
+            //Vamos A realizar el consumos de la interface
+            categories = await CategoryService.GetAllCategories();
         }
         catch (Exception ex)
         {
-            Message = "Something went wrong... " + ex.Message;
+            Message = "Algo a salido mal: " + ex.Message;
+            //ahora lo vamos a imprimir en la parte de arriba
         }
     }
 }

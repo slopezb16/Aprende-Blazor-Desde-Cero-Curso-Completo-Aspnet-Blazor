@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace BlazorExpenseTracker.Model
 {
-    public class Expense
+    public class Expense //: IValidatableObject
     {
         public int Id { get; set; }
         [Required]
@@ -36,5 +36,22 @@ namespace BlazorExpenseTracker.Model
         {
             OnSelectedExpenseChanged.Invoke();
         }
+
+        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        //{
+        //    var error = new List<ValidationResult>();
+
+        //    if(ExpenseType == ExpenseType.Income && Amount < 0)
+        //    {
+        //        error.Add(new ValidationResult("Income can't be lasser that zero",
+        //            new[] { nameof(Amount) }));
+        //    }
+        //    else if (ExpenseType == ExpenseType.Expense && Amount > 0) 
+        //    {
+        //        error.Add(new ValidationResult("Expense can't be greater that zero",
+        //           new[] { nameof(Amount) }));
+        //    }
+        //    return error;
+        //}
     }
 }
