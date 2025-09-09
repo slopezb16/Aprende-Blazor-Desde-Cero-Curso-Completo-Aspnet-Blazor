@@ -18,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -51,8 +47,7 @@
               "RelativeToolTip": "BlazorExpenseTracker2.UI\\Pages\\ExpenseDetails.razor",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAEMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-09T01:27:14.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T01:27:14.58Z"
             }
           ]
         }
