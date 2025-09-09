@@ -1,9 +1,10 @@
 ﻿using BlazorExpenseTracker.Model.Validation;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace BlazorExpenseTracker.Model
 {
-    public class Expense //: IValidatableObject
+    public class Expense
     {
         public int Id { get; set; }
         [Required]
@@ -11,28 +12,29 @@ namespace BlazorExpenseTracker.Model
         public decimal Amount { get; set; }
         [Required]
         public string CategoryId { get; set; }
-        public Category? Category { get; set; }
+        //[ValidateNever] // 👈 evita que el binder intente validar Category
+        public Category? Category { get; set; } // 👈  el ? Evita que sea obligatorio - Solo me pasa a mi porque estoy en Net6 - Ellos trabajan en  .NET 5 y anteriores normalmente no se aplicaba validación automática sobre propiedades de navegación complejas cuando eran null
         [Required]
         [ExpenseTransactionDateValidator(DaysInTheFuture = 30)]
         public DateTime TransactionDate { get; set; }
         public ExpenseType ExpenseType { get; set; }
 
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    var error = new List<ValidationResult>();
+        public event Action OnSelectedExpenseChanged;
 
-        //    if (ExpenseType == ExpenseType.Income && Amount < 0)
-        //    {
-        //        error.Add(new ValidationResult("Income can't be lesser that zero.",
-        //            new[] { nameof(Amount) }));
-        //    }
-        //    else if (ExpenseType == ExpenseType.Expense && Amount > 0)
-        //    {
-        //        error.Add(new ValidationResult("Expense can't be greater that zero.",
-        //            new[] { nameof(Amount) }));
-        //    }
+        public void SelectedExpenseChanged(Expense expense)
+        {
+            Id = expense.Id;
+            TransactionDate = expense.TransactionDate;
+            Amount = expense.Amount;
+            ExpenseType = expense.ExpenseType;
+            CategoryId = expense.CategoryId;
 
-        //    return error;
-        //}
+            NotifySelectedExpenseChanged();
+        }
+
+        private void NotifySelectedExpenseChanged()
+        {
+            OnSelectedExpenseChanged.Invoke();
+        }
     }
 }

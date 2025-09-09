@@ -26,7 +26,7 @@ namespace BlazorExpenseTracker.Api.Controllers
         {
             return Ok(await _categoryRepository.GetCategoryDetails(id));
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] Category category)
         {

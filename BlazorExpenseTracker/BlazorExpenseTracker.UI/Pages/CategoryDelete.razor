@@ -1,10 +1,8 @@
 ﻿@page "/categorydelete/{id:int}"
-@using BlazorExpenseTracker.Model
-@using BlazorExpenseTracker.UI.Interfaces
 @inject ICategoryService CategoryService
 @inject NavigationManager NavigationManager
 
-<div class="modal" tabindex="-1" style="display:block" role="dialog"
+    <div class="modal" tabindex="-1" style="display:block" role="dialog"
      <div class="modal-dialog">
          <div class="modal-content">
              <div class="modal-header">
@@ -44,7 +42,7 @@
 
     protected async override Task OnInitializedAsync()
     {
-        if (id > 0)
+        if(id >  0)
             category = await CategoryService.GetCategoryDetails(id);
     }
 

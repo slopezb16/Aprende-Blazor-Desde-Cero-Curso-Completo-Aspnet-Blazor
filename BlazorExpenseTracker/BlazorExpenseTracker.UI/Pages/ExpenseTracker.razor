@@ -1,6 +1,4 @@
 ﻿@page "/expensetracker"
-@using BlazorExpenseTracker.Model
-@using BlazorExpenseTracker.UI.Components
 
 @implements IDisposable
 
@@ -31,13 +29,13 @@
     protected override Task OnInitializedAsync()
     {
         expense = new Expense();
-        // expense.OnSelectedExpenseChanged += StateHasChanged;
+        expense.OnSelectedExpenseChanged += StateHasChanged;
 
         return base.OnInitializedAsync();
     }
 
     public void Dispose()
     {
-        // expense.OnSelectedExpenseChanged -= StateHasChanged;
+        expense.OnSelectedExpenseChanged -= StateHasChanged;
     }
 }

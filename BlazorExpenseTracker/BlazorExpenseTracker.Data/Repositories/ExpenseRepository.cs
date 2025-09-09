@@ -18,7 +18,6 @@ namespace BlazorExpenseTracker.Data.Repositories
             return new SqlConnection(_connectionString.ConnectionString);
         }
 
-
         public async Task<IEnumerable<Expense>> GetAllExpenses()
         {
             var db = dbConnection();
@@ -52,28 +51,44 @@ namespace BlazorExpenseTracker.Data.Repositories
 
         public async Task<bool> InsertExpenseDetails(Expense expense)
         {
-            var db = dbConnection();
+            try
+            {
+                using var db = dbConnection();
 
-            var sql = @" INSERT INTO Expenses(Amount, CategoryId, ExpenseType, TransactionDate)
-                         VALUES(@Amount, @CategoryId, @ExpenseType, @TransactionDate) ";
+                var sql = @"INSERT INTO Expenses(Amount, CategoryId, ExpenseType, TransactionDate)
+                    VALUES(@Amount, @CategoryId, @ExpenseType, @TransactionDate)";
 
-            var result = await db.ExecuteAsync(sql,
-                new { expense.Amount, expense.CategoryId, expense.ExpenseType, expense.TransactionDate });
+                var result = await db.ExecuteAsync(sql, new
+                {
+                    expense.Amount,
+                    expense.CategoryId,
+                    expense.ExpenseType,
+                    expense.TransactionDate
+                });
 
                 return result > 0;
+            }
+            catch (Exception ex)
+            {
+                // Aquí puedes loguear el error con tu logger (NLog, Serilog, Console, etc.)
+                Console.WriteLine($"Error en InsertExpenseDetails: {ex.Message}");
+                // También puedes relanzar si quieres que lo maneje más arriba
+                throw;
+            }
         }
 
         public async Task<bool> UpdateExpense(Expense expense)
         {
-            var db = dbConnection();
+            try
+            {
+                using var db = dbConnection();
 
-            var sql = @" UPDATE Expenses 
-                         SET Amount = @Amount, CategoryId = @CategoryId, ExpenseType = @ExpenseType,
-                             TransactionDate = @TransactionDate 
-                        WHERE Id = @Id ";
+                var sql = @"UPDATE Expenses 
+                    SET Amount = @Amount, CategoryId = @CategoryId, ExpenseType = @ExpenseType,
+                        TransactionDate = @TransactionDate 
+                    WHERE Id = @Id";
 
-            var result = await db.ExecuteAsync(sql,
-                new
+                var result = await db.ExecuteAsync(sql, new
                 {
                     expense.Id,
                     expense.Amount,
@@ -82,7 +97,13 @@ namespace BlazorExpenseTracker.Data.Repositories
                     expense.TransactionDate
                 });
 
-            return result > 0;
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en UpdateExpense: {ex.Message}");
+                throw;
+            }
         }
 
         public async Task<bool> DeleteExpense(int id)

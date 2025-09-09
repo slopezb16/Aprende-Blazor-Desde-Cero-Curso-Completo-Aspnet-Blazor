@@ -14,6 +14,7 @@ namespace BlazorExpenseTracker.UI.Services
             _httpClient = httpClient;
         }
 
+
         public async Task<IEnumerable<Expense>> GetAllExpenses()
         {
             return await JsonSerializer.DeserializeAsync<IEnumerable<Expense>>(
@@ -30,17 +31,12 @@ namespace BlazorExpenseTracker.UI.Services
 
         public async Task SaveExpense(Expense expense)
         {
-            var ExpenseJson = new StringContent(JsonSerializer.Serialize(expense),
-                Encoding.UTF8, "application/Json");
+            var expenseJson = new StringContent(JsonSerializer.Serialize(expense), Encoding.UTF8, "application/json");
 
             if (expense.Id == 0)
-            {
-                await _httpClient.PostAsync("api/expense", ExpenseJson); //insert expense
-            }
+                await _httpClient.PostAsync("api/expense", expenseJson); //Insert Expense
             else
-            {
-                await _httpClient.PutAsync("api/expense", ExpenseJson); //Update expense
-            }
+                await _httpClient.PutAsync("api/expense", expenseJson); //Update Expense
         }
 
         public async Task DeleteExpense(int id)

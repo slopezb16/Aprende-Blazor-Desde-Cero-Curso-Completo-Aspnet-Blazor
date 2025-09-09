@@ -1,6 +1,4 @@
-﻿@using BlazorExpenseTracker.Model
-@using BlazorExpenseTracker.UI.Interfaces
-@inject ICategoryService CategoryService
+﻿@inject ICategoryService CategoryService
 @inject IExpenseService ExpenseService
 @inject IJSRuntime JsRuntime
 
@@ -10,22 +8,18 @@
     <table class="table">
         <tr>
             <td>Amount: </td>
-            <td>
-                <InputNumber class="form-control col-sm-5" @bind-Value="@expense.Amount"></InputNumber>
-                <ValidationMessage For="@(() => expense.Amount)"></ValidationMessage>
-            </td>
+            <td><InputNumber class="form-control col-sm-5" @bind-Value="@expense.Amount"></InputNumber>
+                <ValidationMessage For="@(() => expense.Amount)"></ValidationMessage></td>
         </tr>
         <tr>
             <td>Transaction Date:</td>
-            <td>
-                <InputDate class="form-control col-sm-5" @bind-Value="@expense.TransactionDate"></InputDate>
-                <ValidationMessage For="@(() => expense.TransactionDate)" />
+            <td><InputDate class="form-control col-sm-5" @bind-Value="@expense.TransactionDate"></InputDate>
+                <ValidationMessage For="@(() => expense.TransactionDate)"/>
             </td>
         </tr>
         <tr>
             <td>Category:</td>
-            <td>
-                <InputSelect class="form-control col-sm-5" @bind-Value="@expense.CategoryId">
+            <td><InputSelect class="form-control col-sm-5" @bind-Value="@expense.CategoryId">
                     @foreach (Category item in categories)
                     {
                         <option value="@item.Id">@item.Name</option>
@@ -47,8 +41,8 @@
                 <input type="submit" class="btn btn-success" value="@(expense.Id == 0 ? "Save" : "Update")" />
                 <input type="button" class="btn btn-secondary" value="Cancel" style="@GetCancelButtonStyle()"
                        @onclick="Cancel" />
-                <input type="button" class="btn btn-danger" value="Delete" style="@GetCancelButtonStyle()"
-                       @onclick="DeleteExpense" />
+                <input type="button" class="btn btn-danger" value="Delete" style="@GetCancelButtonStyle()" 
+                       @onclick="DeleteExpense"/>
             </td>
         </tr>
 
@@ -69,6 +63,8 @@
     {
         categories = await CategoryService.GetAllCategories();
 
+        expense.TransactionDate = DateTime.Now;
+
         if (expense.Id == 0)
         {
             expense.CategoryId = categories.FirstOrDefault().Id.ToString();
@@ -81,7 +77,7 @@
         await ExpenseService.SaveExpense(expense);
         ClearExpense();
 
-        // expense.SelectedExpenseChanged(expense);
+        expense.SelectedExpenseChanged(expense);
     }
 
     protected string GetCancelButtonStyle()
@@ -109,8 +105,8 @@
         if (confirmed)
         {
             await ExpenseService.DeleteExpense(expense.Id);
-            // expense.SelectedExpenseChanged(expense);
+            expense.SelectedExpenseChanged(expense);
             ClearExpense();
-        }
+        }      
     }
 }

@@ -5,7 +5,6 @@ namespace BlazorExpenseTracker.Model.Validation
     public class ExpenseTransactionDateValidator : ValidationAttribute
     {
         public int DaysInTheFuture { get; set; }
-
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             DateTime transactionDate;

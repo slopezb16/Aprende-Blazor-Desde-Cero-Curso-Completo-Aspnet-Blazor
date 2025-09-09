@@ -1,6 +1,4 @@
-﻿@using BlazorExpenseTracker.Model
-@using BlazorExpenseTracker.UI.Interfaces
-@inject IExpenseService ExpenseService
+﻿@inject IExpenseService ExpenseService
 
 <h1>History</h1>
 <p>@Message</p>
@@ -9,13 +7,13 @@
 {
     <p><em>Loading...</em></p>
 }
-else
+else 
 {
     <table class="table table-bordered table-light table-hover">
         <thead>
-        <th>Amount</th>
-        <th>Category</th>
-        <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
         </thead>
         <tbody>
             @foreach (var expense in expenses)
@@ -41,7 +39,7 @@ else
     {
         var expense = await ExpenseService.GetExpenseDetails(expenseId);
 
-        // SelectedExpense.SelectedExpenseChanged(expense);
+        SelectedExpense.SelectedExpenseChanged(expense);
     }
 
     protected override async Task OnParametersSetAsync()
